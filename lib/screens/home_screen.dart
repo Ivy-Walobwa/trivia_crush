@@ -14,49 +14,48 @@ class HomeScreen extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: blackColor,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20.0),
-                          bottomRight: Radius.circular(20.0),
+                  Container(
+                    height:  MediaQuery.of(context).size.height * .30,
+                    decoration: BoxDecoration(
+                      color: blackColor,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20.0),
+                        bottomRight: Radius.circular(20.0),
+                      ),
+                    ),
+                    padding: EdgeInsets.all(10.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.all(MediaQuery.of(context).size.height * .02),
+                          child: CircleAvatar(
+                            radius: 25.0,
+                            backgroundImage: AssetImage('images/profile.jpg'),
+                          ),
                         ),
-                      ),
-                      padding: EdgeInsets.all(10.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(10.0),
-                            child: CircleAvatar(
-                              radius: 25.0,
-                              backgroundImage: AssetImage('images/profile.jpg'),
+                        Container(
+                          padding: EdgeInsets.only( top: MediaQuery.of(context).size.height * .04),
+                          child: Text(
+                            'Ivy Walobwa',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18.0,
                             ),
                           ),
-                          Container(
-                            padding: EdgeInsets.only( top:20.0),
-                            child: Text(
-                              'Ivy Walobwa',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 18.0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(20.0),
+                    margin: EdgeInsets.symmetric(horizontal: 20.0,),
                     child: Column(
                       children: <Widget>[
                         Container(
                           margin: EdgeInsets.only(
-                            top: 80.0,
-                            bottom: 20.0,
+                            top:  MediaQuery.of(context).size.height * .15,
+                            bottom: MediaQuery.of(context).size.height * .03,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -82,13 +81,16 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Column(
                           children: <Widget>[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                ReusableCard(),
-                                ReusableCard(),
-                                ReusableCard(),
-                              ],
+                            Container(
+                              margin: EdgeInsets.only(bottom: MediaQuery.of(context).size.height * .03),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: <Widget>[
+                                  ReusableCard(),
+                                  ReusableCard(),
+                                  ReusableCard(),
+                                ],
+                              ),
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

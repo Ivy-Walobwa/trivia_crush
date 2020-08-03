@@ -11,11 +11,11 @@ class OverlayCard extends StatelessWidget {
     return Container(
       alignment: Alignment.topRight,
       padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * .13,
+          top: MediaQuery.of(context).size.height * .12,
           right: 20.0,
           left: 20.0),
       child: Container(
-        height: 200.0,
+        height: MediaQuery.of(context).size.height * .30,
         width: MediaQuery.of(context).size.width,
         child: Card(
           color: Colors.black,
@@ -29,8 +29,9 @@ class OverlayCard extends StatelessWidget {
               Image.asset('images/question.png',),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.all(30.0),
+                  margin: EdgeInsets.all(MediaQuery.of(context).size.height * .03),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
                       'Play & Win',

@@ -9,8 +9,8 @@ class ReusableCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.only(right: 10.0, bottom: 10.0),
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 5.0),
+        margin: EdgeInsets.only(right: 10.0),
+        padding: EdgeInsets.symmetric(vertical:  MediaQuery.of(context).size.height * .03, horizontal: MediaQuery.of(context).size.height * .01),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10.0),
@@ -20,7 +20,7 @@ class ReusableCard extends StatelessWidget {
           children: <Widget>[
             Icon(
               Icons.beach_access,
-              size: 60.0,
+              size: MediaQuery.of(context).size.height * .08,
               color: Colors.orange,
             ),
             SizedBox(height: 10.0,),
