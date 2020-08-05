@@ -8,15 +8,18 @@ class OverlayCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
       alignment: Alignment.topRight,
       padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * .12,
+          top: screenHeight * .12,
           right: 20.0,
           left: 20.0),
       child: Container(
-        height: MediaQuery.of(context).size.height * .30,
-        width: MediaQuery.of(context).size.width,
+        height: screenHeight * .30,
+        width: screenWidth,
         child: Card(
           color: Colors.black,
           elevation: 4.0,
@@ -29,7 +32,7 @@ class OverlayCard extends StatelessWidget {
               Image.asset('images/question.png',),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.all(MediaQuery.of(context).size.height * .03),
+                  margin: EdgeInsets.all(screenHeight * .03),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[

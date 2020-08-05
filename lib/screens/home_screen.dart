@@ -5,8 +5,10 @@ import 'package:trivia_crush/components/reusable_card.dart';
 import 'package:trivia_crush/components/overlay_card.dart';
 
 class HomeScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+    var screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         backgroundColor: lightblueColor,
         body: SafeArea(
@@ -15,7 +17,7 @@ class HomeScreen extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Container(
-                    height:  MediaQuery.of(context).size.height * .30,
+                    height:  screenHeight * .30,
                     decoration: BoxDecoration(
                       color: blackColor,
                       borderRadius: BorderRadius.only(
@@ -28,14 +30,14 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
-                          padding: EdgeInsets.all(MediaQuery.of(context).size.height * .02),
+                          padding: EdgeInsets.all(screenHeight * .02),
                           child: CircleAvatar(
                             radius: 25.0,
                             backgroundImage: AssetImage('images/profile.jpg'),
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.only( top: MediaQuery.of(context).size.height * .04),
+                          padding: EdgeInsets.only( top: screenHeight * .04),
                           child: Text(
                             'Ivy Walobwa',
                             style: TextStyle(
@@ -54,8 +56,8 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         Container(
                           margin: EdgeInsets.only(
-                            top:  MediaQuery.of(context).size.height * .15,
-                            bottom: MediaQuery.of(context).size.height * .03,
+                            top:  screenHeight* .15,
+                            bottom:screenHeight * .03,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -82,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                         Column(
                           children: <Widget>[
                             Container(
-                              margin: EdgeInsets.only(bottom: MediaQuery.of(context).size.height * .03),
+                              margin: EdgeInsets.only(bottom: screenHeight * .03),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
