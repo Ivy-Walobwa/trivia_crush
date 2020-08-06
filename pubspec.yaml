@@ -32,6 +32,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  rounded_checkbox_list_tile:
+    git:
+      url: https://github.com/Ivy-Walobwa/rounded_checkbox_list_tile.git
+      ref: master
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

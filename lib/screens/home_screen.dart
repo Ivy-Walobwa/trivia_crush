@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:trivia_crush/constant.dart';
-import 'package:trivia_crush/components/reusable_card.dart';
 import 'package:trivia_crush/components/overlay_card.dart';
+import 'package:trivia_crush/components/quiz_categories.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-        backgroundColor: lightblueColor,
+        backgroundColor: kLightblueBackgroundColor,
         body: SafeArea(
           child: Stack(
             children: <Widget>[
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
                   Container(
                     height:  screenHeight * .30,
                     decoration: BoxDecoration(
-                      color: blackColor,
+                      color: blackGreyColor,
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(20.0),
                         bottomRight: Radius.circular(20.0),
@@ -40,73 +40,13 @@ class HomeScreen extends StatelessWidget {
                           padding: EdgeInsets.only( top: screenHeight * .04),
                           child: Text(
                             'Ivy Walobwa',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18.0,
-                            ),
+                            style: kQuizTextStyle,
                           ),
                         ),
                       ],
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20.0,),
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          margin: EdgeInsets.only(
-                            top:  screenHeight* .15,
-                            bottom:screenHeight * .03,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Text(
-                                'Top Quiz Categories',
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              FlatButton(
-                                onPressed: () {},
-                                child: Text('View All'),
-                                color: Color(0xFFD5F0F6),
-                                textColor: Color(0xFF3EDAF6),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Column(
-                          children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.only(bottom: screenHeight * .03),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: <Widget>[
-                                  ReusableCard(),
-                                  ReusableCard(),
-                                  ReusableCard(),
-                                ],
-                              ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                ReusableCard(),
-                                ReusableCard(),
-                                ReusableCard(),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+                  QuizCategories(screenHeight: screenHeight),
                 ],
               ),
               OverlayCard()
@@ -115,3 +55,5 @@ class HomeScreen extends StatelessWidget {
         ));
   }
 }
+
+

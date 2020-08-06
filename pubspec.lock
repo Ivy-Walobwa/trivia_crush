@@ -116,6 +116,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.3"
+  rounded_checkbox_list_tile:
+    dependency: "direct dev"
+    description:
+      path: "."
+      ref: master
+      resolved-ref: "47d87bb56db9dc2a4d3698ebae245deef6039cb9"
+      url: "https://github.com/Ivy-Walobwa/rounded_checkbox_list_tile.git"
+    source: git
+    version: "0.0.1"
   sky_engine:
     dependency: transitive
     description: flutter

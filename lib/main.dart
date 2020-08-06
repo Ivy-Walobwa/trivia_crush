@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:trivia_crush/screens/quiz_screen.dart';
+import 'package:trivia_crush/screens/result_screens.dart';
 import 'screens/home_screen.dart';
 
 void main() {
@@ -10,7 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      theme: ThemeData(unselectedWidgetColor: Colors.white),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => HomeScreen(),
+        '/quiz' : (context) => QuizScreen(),
+        '/result': (context) => ResultScreen(),
+      },
     );
   }
 }

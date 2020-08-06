@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:trivia_crush/constant.dart';
 
 class OverlayCard extends StatelessWidget {
   const OverlayCard({
@@ -38,17 +39,11 @@ class OverlayCard extends StatelessWidget {
                     children: <Widget>[
                       Text(
                       'Play & Win',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40.0,
-                          fontWeight: FontWeight.w900,
-                        ),
+                        style: kCongratsTextStyle
                   ),
                       Text(
                         'Play and stand a chance to win amazing prizes',
-                        style: TextStyle(
-                          color: Colors.white70,
-                        ),
+                        style:kAnswersStyle,
                       )
                     ],
                   ),
