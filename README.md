@@ -1,16 +1,8 @@
 # trivia_crush
 
-Trivia app
+Trivia Crush UI 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#Preview
+<img src="https://user-images.githubusercontent.com/49009293/89959934-2d0efd80-dc46-11ea-9e96-ac04804b9993.jpg" alt="trivia crush app" width="200"/> 
+<img src="https://user-images.githubusercontent.com/49009293/89959939-3009ee00-dc46-11ea-9bc0-bd49bfbc63d5.jpg" alt="trivia crush app" width="200"/>
+<img src="https://user-images.githubusercontent.com/49009293/89959944-339d7500-dc46-11ea-82f5-f2fe52aaa5ef.jpg" alt="trivia crush app" width="200"/>
